@@ -1,0 +1,246 @@
+:root {
+  /* ### Primary */
+
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+
+  /* ### Neutral */
+
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Karla", monospace;
+  background-color: var(--Light-Gray);
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.container {
+  /* display: grid; */
+  /* grid-template-rows: repeat(3, 1fr); */
+  padding: 4rem 1.5rem 4rem 1.5rem;
+  /* margin: 0 auto; */
+}
+
+.pad {
+  padding: 2rem 1.5rem;
+}
+
+h1 {
+  color: var(--Cyan);
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+
+.one {
+  /* padding: 1.5rem; */
+  background-color: hsl(0, 0%, 100%);
+  border-top-right-radius: 0.7rem;
+  border-top-left-radius: 0.7rem;
+}
+
+.card-one-info {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.p1 {
+  color: var(--Bright-Yellow);
+  font-weight: 700;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.card-one-info p:nth-child(3) {
+  color: var(--Grayish-Blue);
+  line-height: 1.9;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.two {
+  background-color: var(--Cyan);
+}
+
+.card-two-info {
+  display: grid;
+  gap: 1.5rem;
+}
+
+h2 {
+  color: var(--Light-Gray);
+  font-size: 1.15rem;
+}
+
+.price {
+  color: white;
+  font-size: 2.3rem;
+}
+
+.price span {
+  color: hsla(204, 43%, 93%, 0.5);
+  font-size: 1rem;
+  position: relative;
+  top: -0.5rem;
+  left: 0.2rem;
+}
+
+.card-two-info p:nth-child(3) {
+  color: hsla(204, 43%, 93%, 0.9);
+  margin-top: -1rem;
+  /* font-size: 1.06rem; */
+}
+
+.btn {
+  background-color: var(--Bright-Yellow);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.1rem 1.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.three {
+  background-color: hsla(179, 62%, 43%, 0.8);
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+}
+
+.card-three-info {
+  display: grid;
+  gap: 1.2rem;
+  padding: 2rem;
+}
+
+.card-three-info ul {
+  color: hsla(204, 43%, 93%, 0.9);
+  line-height: 1.5;
+  list-style: none;
+  font-size: 1rem;
+}
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  margin-top: -3rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+#name {
+  color: red;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .container {
+    max-width: 850px;
+    /* margin-bottom: 0; */
+    /* margin-top: 0; */
+    /* padding-bottom: 0; */
+    /* padding-top: 4rem; */
+    margin: auto;
+  }
+
+  .one {
+    border-top-right-radius: 0.7rem;
+    border-top-left-radius: 0.7rem;
+  }
+
+  .card-one-info {
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+  }
+
+  .p1 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+  }
+
+  .card-one-info p:nth-child(3) {
+    margin-top: -0.7rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  .sides {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* Original styling */
+  /*.two {
+      max-width: 50%;
+      border-bottom-left-radius: 0.7rem;
+    }*/
+
+  /* End Styling */
+
+  .two {
+    flex-grow: 1;
+    border-bottom-left-radius: 0.7rem;
+  }
+
+  .card-two-info {
+    padding: 3rem 3.5rem 2rem 3.5rem;
+    /* margin: 2rem; */
+  }
+
+  .btn:hover {
+    background-color: red;
+    color: black;
+  }
+
+  /* Original styling so move section 3 up*/
+
+  /*.three {
+      position: relative;
+      left: 50%;
+      bottom: 100%; 
+      
+      max-width: 50%;
+      border-bottom-right-radius: 0.7rem;
+      border-bottom-left-radius: 0;
+    }*/
+
+  /* End Styling*/
+
+  .three {
+    flex-grow: 2;
+    border-bottom-left-radius: 0;
+  }
+
+  .card-three-info {
+    padding-left: 3.5rem;
+    padding-top: 3rem;
+  }
+}
